@@ -15,23 +15,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
     <title>View Mail</title>
   </head>
 
   <body>
-
-    <?php
-      if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-          echo "Name: " . $row["name"] . " EMail: " . $row["email"] . " Message: " . $row["msg"] . "<br>";
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+      <?php
+        if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            echo "<tr>";
+              echo "<td>" . $row["name"] . "</td>";
+              echo "<td>" . $row["email"] . "</td>";
+              echo "<td>" . $row["msg"] . "</td>";
+            echo "</tr>";
+          }
         }
-      } else {
-        echo "No Mail";
-      }
 
-      mysqli_close($conn);
-     ?>
+        mysqli_close($conn);
+       ?>
+   </table>
 
   </body>
 </html>
