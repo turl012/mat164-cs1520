@@ -44,7 +44,7 @@
         </section>
         <section id="work">
           <h3>Work Experience</h3>
-          <p><b>University of Pittsburgh CSSD:</b></p>
+          <p><b>University of Pittsburgh CSSD</b></p>
           <p>Senior Student Technical Consultant</p>
           <p>Student Technical Consultant</p>
           <p style="padding-top:1em"><b>Camp Seph Mack</b></p>
