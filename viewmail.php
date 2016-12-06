@@ -37,7 +37,7 @@
             echo "<tr>";
               echo "<td>" . $row["name"] . "</td>";
               echo "<td> <a href=\"mailto:" . $row["email"] . "\">" . $row["email"] . "</a> </td>";
-              echo "<td>" . $row["msg"] . "</td>";
+              echo "<td>" .  htmlspecialchars($row["msg"], ENT_QUOTES, 'UTF-8') . "</td>";
             echo "</tr>";
           }
         } else {
