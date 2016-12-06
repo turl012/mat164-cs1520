@@ -36,7 +36,7 @@
           while($row = $result->fetch_assoc()) {
             echo "<tr>";
               echo "<td>" . $row["name"] . "</td>";
-              echo "<td>" . $row["email"] . "</td>";
+              echo "<td> <a href=\"mailto:" . $row["email"] . "\">" . $row["email"] . "</a> </td>";
               echo "<td>" . $row["msg"] . "</td>";
             echo "</tr>";
           }

@@ -47,3 +47,13 @@ td {
   font-size: 1.5rem;
   color: #32322C;
 }
+
+a {
+  text-decoration: none;
+  color: #32322C;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #39A0ED;
+}
