@@ -13,5 +13,5 @@
 
   mysqli_query($conn,"INSERT INTO Messages (name,email,msg) VALUES ('" . $pname . "','". $pmail . "','". $pmsg ."')");
 
-mysqli_close($conn);
+  mysqli_close($conn);
 ?>

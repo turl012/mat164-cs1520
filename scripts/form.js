@@ -1,8 +1,3 @@
-/*$("#contactMe").submit(function(e) {
-    //$.post('index.php', $('#myForm').serialize());
-    //e.preventDefault();
-});*/
-
 $('form[name=contactMe]').submit(function(e) {
    e.preventDefault();
 
