@@ -9,17 +9,22 @@
 
   $sql = "SELECT name, email, msg FROM Messages";
   $result = $conn->query($sql);
+
+  mysqli_close($conn);
 ?>
 
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/mail.css" rel="stylesheet">
     <title>View Mail</title>
   </head>
 
   <body>
+    <header>
+      <h1>View Mail</h1>
+    </header>
     <table>
       <tr>
         <th>Name</th>
@@ -35,9 +40,13 @@
               echo "<td>" . $row["msg"] . "</td>";
             echo "</tr>";
           }
+        } else {
+          echo "<tr>";
+            echo "<td>No</td>";
+            echo "<td>new</td>";
+            echo "<td>messages</td>";
+          echo "</tr>";
         }
-
-        mysqli_close($conn);
        ?>
    </table>
 
