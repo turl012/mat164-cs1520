@@ -1,5 +1,19 @@
-$("#contactMe").submit(function(e) {
-    e.preventDefault();
+/*$("#contactMe").submit(function(e) {
+    //$.post('index.php', $('#myForm').serialize());
+    //e.preventDefault();
+});*/
+
+$('form[name=contactMe]').submit(function(e) {
+   e.preventDefault();
+
+   // Use AJAX to submit form
+   $.ajax({
+     url : this.action,
+     type : this.method,
+     data : $(this).serialize(),
+     success : function(response) {
+     }
+   });
 });
 
 function validateForm() {
