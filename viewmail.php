@@ -35,8 +35,8 @@
         if ($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
             echo "<tr>";
-              echo "<td>" . $row["name"] . "</td>";
-              echo "<td> <a href=\"mailto:" . $row["email"] . "\">" . $row["email"] . "</a> </td>";
+              echo "<td>" .  htmlspecialchars($row["name"], ENT_QUOTES, 'UTF-8') . "</td>";
+              echo "<td> <a href=\"mailto:" . htmlspecialchars($row["email"], ENT_QUOTES, 'UTF-8') . "\">" . htmlspecialchars($row["email"], ENT_QUOTES, 'UTF-8') . "</a> </td>";
               echo "<td>" .  htmlspecialchars($row["msg"], ENT_QUOTES, 'UTF-8') . "</td>";
             echo "</tr>";
           }
